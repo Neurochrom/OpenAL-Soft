@@ -6,10 +6,11 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE     := openal
 
-LOCAL_C_INCLUDES := $(LOCAL_PATH)                        \
-                    $(LOCAL_PATH)/../../include          \
-                    $(LOCAL_PATH)/../../Alc              \
-                    $(LOCAL_PATH)/../../OpenAL32/Include \
+LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../include
+LOCAL_C_INCLUDES        := $(LOCAL_EXPORT_C_INCLUDES)           \
+                           $(LOCAL_PATH)                        \
+                           $(LOCAL_PATH)/../../Alc              \
+                           $(LOCAL_PATH)/../../OpenAL32/Include \
 
 LOCAL_SRC_FILES  := ../../OpenAL32/alAuxEffectSlot.c \
                     ../../OpenAL32/alBuffer.c        \
