@@ -94,6 +94,8 @@ extern inline ALuint fastf2u(ALfloat f);
 ALuint CPUCapFlags = 0;
 
 
+#ifndef ANDROID
+
 void FillCPUCaps(ALuint capfilter)
 {
     ALuint caps = 0;
@@ -164,6 +166,28 @@ void FillCPUCaps(ALuint capfilter)
     CPUCapFlags = caps & capfilter;
 }
 
+#else
+
+#include <cpu-features.h>
+
+void FillCPUCaps(ALuint capfilter)
+{
+    ALuint caps = 0;
+
+#if defined(__i386__) || defined(__x86_64__)
+    caps |= CPU_CAP_SSE;
+    caps |= CPU_CAP_SSE2;
+#elif defined(__arm__) || defined(__thumb__)
+    if (android_getCpuFeatures() & ANDROID_CPU_ARM_FEATURE_NEON)
+    {
+        caps |= CPU_CAP_NEON;
+    }
+#endif
+
+    CPUCapFlags = caps & capfilter;
+}
+
+#endif
 
 void *al_malloc(size_t alignment, size_t size)
 {
@@ -366,6 +390,9 @@ WCHAR *strdupW(const WCHAR *str)
 #include <sched.h>
 #include <time.h>
 #include <sys/time.h>
+#if defined(_POSIX_MONOTONIC_CLOCK) && (_POSIX_MONOTONIC_CLOCK == 0)
+#include <sys/sysconf.h>
+#endif
 
 void InitializeCriticalSection(CRITICAL_SECTION *cs)
 {
