@@ -20,11 +20,11 @@
 
 #include <stdlib.h>
 
-#include "config.h"
-#include "alError.h"
-#include "alMain.h"
-#include "alAuxEffectSlot.h"
-#include "alu.h"
+#include "../config.h"
+#include "../alError.h"
+#include "../alMain.h"
+#include "../alAuxEffectSlot.h"
+#include "../alu.h"
 
 
 typedef struct ALcompressorState {

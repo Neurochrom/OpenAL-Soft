@@ -1,11 +1,11 @@
 
-#include "config.h"
+#include "../config.h"
 
 #include <stdlib.h>
 
-#include "alMain.h"
+#include "../alMain.h"
 
-#include "backends/base.h"
+#include "base.h"
 
 
 /* Base ALCbackend method implementations. */

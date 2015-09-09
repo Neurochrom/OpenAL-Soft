@@ -19,12 +19,12 @@
  * bundled with NDK.
  */
 
-#include "config.h"
+#include "../config.h"
 
 #include <stdlib.h>
 
-#include "alMain.h"
-#include "alu.h"
+#include "../alMain.h"
+#include "../alu.h"
 
 
 #include <SLES/OpenSLES.h>

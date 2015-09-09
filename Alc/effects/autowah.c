@@ -20,12 +20,12 @@
 
 #include <stdlib.h>
 
-#include "config.h"
-#include "alu.h"
-#include "alFilter.h"
-#include "alError.h"
-#include "alMain.h"
-#include "alAuxEffectSlot.h"
+#include "../config.h"
+#include "../alu.h"
+#include "../alFilter.h"
+#include "../alError.h"
+#include "../alMain.h"
+#include "../alAuxEffectSlot.h"
 
 
 /* Auto-wah is simply a low-pass filter with a cutoff frequency that shifts up

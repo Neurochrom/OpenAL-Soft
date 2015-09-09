@@ -1,8 +1,8 @@
 #ifndef AL_BACKENDS_BASE_H
 #define AL_BACKENDS_BASE_H
 
-#include "alMain.h"
-#include "compat.h"
+#include "../alMain.h"
+#include "../compat.h"
 
 
 struct ALCbackendVtable;

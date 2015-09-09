@@ -18,14 +18,14 @@
  * Or go to http://www.gnu.org/copyleft/lgpl.html
  */
 
-#include "config.h"
+#include "../config.h"
 
 #include <stdlib.h>
 
-#include "alMain.h"
-#include "alu.h"
+#include "../alMain.h"
+#include "../alu.h"
 
-#include "backends/base.h"
+#include "base.h"
 
 
 typedef struct ALCloopback {

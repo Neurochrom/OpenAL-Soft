@@ -1,12 +1,12 @@
-#include "config.h"
+#include "../config.h"
 
 #include <stdlib.h>
 
 #include "AL/al.h"
 #include "AL/alc.h"
-#include "alMain.h"
-#include "alAuxEffectSlot.h"
-#include "alError.h"
+#include "../alMain.h"
+#include "../alAuxEffectSlot.h"
+#include "../alError.h"
 
 
 typedef struct ALnullState {

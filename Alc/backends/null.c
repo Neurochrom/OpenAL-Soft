@@ -18,19 +18,19 @@
  * Or go to http://www.gnu.org/copyleft/lgpl.html
  */
 
-#include "config.h"
+#include "../config.h"
 
 #include <stdlib.h>
 #ifdef HAVE_WINDOWS_H
 #include <windows.h>
 #endif
 
-#include "alMain.h"
-#include "alu.h"
-#include "threads.h"
-#include "compat.h"
+#include "../alMain.h"
+#include "../alu.h"
+#include "../threads.h"
+#include "../compat.h"
 
-#include "backends/base.h"
+#include "base.h"
 
 
 typedef struct ALCnullBackend {
